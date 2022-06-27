@@ -13,12 +13,12 @@ driver.find_element(By.XPATH,"(//ion-button[@color='primary'])[2]").click()
 time.sleep(2)
 
 driver.find_element(By.XPATH,"//input[@class='native-input sc-ion-input-md']").send_keys("venkatesh")
-driver.find_element(By.XPATH,"(//input[@class='native-input sc-ion-input-md'])[2]").send_keys("Rk")
+driver.find_element(By.XPATH,"(//input[@class='native-input sc-ion-input-md'])[2]").send_keys("SR")
 driver.find_element(By.XPATH,"//ion-button[@slot='end']").click()
 time.sleep(2)
 
-element = driver.find_element(By.XPATH,"//ion-content[@class='md hydrated']").text
-print(element)
+#element = driver.find_element(By.XPATH,"//ion-content[@class='md hydrated']").text
+#print(element)
 
 driver.find_element(By.XPATH,"//ion-button[@slot='end']").click()
 time.sleep(2)
@@ -44,7 +44,7 @@ driver.find_element(By.XPATH,"(//button[@type='button'])[2]").click()
 driver.find_element(By.XPATH,"//ion-button[@slot='end']").click()
 time.sleep(1)
 
-driver.find_element(By.XPATH,"//input[@name='ion-input-4']").send_keys("venkatrk@gmail.com")
+driver.find_element(By.XPATH,"//input[@name='ion-input-4']").send_keys("venkats@gmail.com")
 driver.find_element(By.XPATH,"//ion-button[@slot='end']").click()
 time.sleep(1)
 
@@ -53,6 +53,16 @@ driver.find_element(By.XPATH,"(//input[@class='native-input sc-ion-input-md'])[7
 driver.find_element(By.XPATH,"(//input[@class='native-input sc-ion-input-md'])[8]").send_keys("600077")
 time.sleep(1)
 driver.find_element(By.XPATH,"//ion-button[@slot='end']").click()
+
+element1 = driver.find_element(By.XPATH,"//ion-label[text()='Body Fat']").text
+print(element1)
+time.sleep(2)
+
+if element1 == "Body Fat":
+    print("Pass")
+else:
+    print("Fail")
+
 
 
 
