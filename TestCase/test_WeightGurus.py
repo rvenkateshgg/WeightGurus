@@ -35,10 +35,3 @@ class TestBrowser():
         time.sleep(1)
         self.driver.find_element(By.XPATH, "(//ion-button[@color='primary'])[3]").click()
         time.sleep(2)
-
-
-
-
-
-
-

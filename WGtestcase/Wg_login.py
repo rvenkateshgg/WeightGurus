@@ -17,7 +17,6 @@ driver.find_element(By.XPATH,"(//input[@class='native-input sc-ion-input-md'])[2
 driver.find_element(By.XPATH,"//ion-button[@color='primary']").click()
 time.sleep(15)
 
-
 week = driver.find_element(By.XPATH,"//ion-segment-button[@value='week']")
 week.click()
 time.sleep(1)
@@ -45,12 +44,13 @@ driver.find_element(By.CLASS_NAME,"responsive-img").click()
 time.sleep(1)
 
 driver.find_element(By.XPATH,"//img[@alt='ManualEntry']").click()
+driver.getElementsByTagName("ion-content")[0].scrollTo(0, 300)
 
 driver.find_element(By.XPATH,"(//ion-icon[@class='ion-accordion-toggle-icon md hydrated'])[2]").click()
 time.sleep(2)
 time.sleep(3)
 
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
 
 
 

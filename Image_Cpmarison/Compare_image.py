@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from PIL import Image, ImageChops, ImageStat
+
 import time
 s = Service(executable_path="../drivers/chromedriver")
 
@@ -38,10 +39,10 @@ def capture_image():
     driver.find_element(By.XPATH,"(//ion-button[@color='primary'])[3]").click()
     time.sleep(2)
     with open(output_logo,'wb') as file:
-         #file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0341.png']").screenshot_as_png)
+         file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0341.png']").screenshot_as_png)
          #file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0342.png']").screenshot_as_png)
          #file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0343.png']").screenshot_as_png)
-         file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0345.png']").screenshot_as_png)
+         #file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0345.png']").screenshot_as_png)
          #file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0346.png']").screenshot_as_png)
          #file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0347.png']").screenshot_as_png)
          #file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0358.png']").screenshot_as_png)
