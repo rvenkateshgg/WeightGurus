@@ -29,4 +29,3 @@ rgb2 = driver.find_element(By.XPATH,"//ion-button[@shape='round']").value_of_css
 print(rgb2)
 hexvalue = Color.from_string(rgb2).hex
 print("Hex value :", hexvalue)
-

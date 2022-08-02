@@ -12,10 +12,12 @@ input_logo = '../input/0345.png'
 output_logo = '../output/0345.png'
 comparison_result = 'output/result1.png'
 
+
 def clear_result():
     files = glob.glob('output/*')
     for f in files:
         os.remove(f)
+
 
 def capture_image():
     driver = webdriver.Chrome(service=s)
@@ -61,6 +63,7 @@ def capture_image():
          #file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0385.png']").screenshot_as_png)
          #file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0396.png']").screenshot_as_png)
          #file.write(driver.find_element(By.XPATH,"//img[@src='assets/img/scales/0396.png']").screenshot_as_png)
+
     img1 = Image.open(input_logo)
     img2 = Image.open(output_logo)
     logoresult = ImageChops.difference(img1,img2)
@@ -78,6 +81,7 @@ def capture_image():
 
     driver.close()
     driver.quit()
+
 
 if __name__ == '__main__':
     clear_result()
